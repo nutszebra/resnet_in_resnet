@@ -431,7 +431,7 @@ class OptimizerPReLUNet(Optimizer):
 
 class OptimizerResnetInResnet(Optimizer):
 
-    def __init__(self, model=None, schedule=(42, 62), lr=0.1, momentum=0.9, weight_decay=1.0e-4):
+    def __init__(self, model=None, schedule=(150, 225), lr=0.1, momentum=0.9, weight_decay=1.0e-4):
         super(OptimizerResnetInResnet, self).__init__(model)
         optimizer = optimizers.MomentumSGD(lr, momentum)
         weight_decay = chainer.optimizer.WeightDecay(weight_decay)
